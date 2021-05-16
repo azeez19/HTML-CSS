@@ -1,0 +1,221 @@
+body {
+  margin: 10px;
+}
+#first {
+  color: blue;
+  font-weight: bold;
+}
+.highlight {
+  background-color: blue;
+}
+.product {
+  background-color: aqua;
+  width: 300px;
+}
+p.username {
+  font-weight: bold;
+}
+img {
+  width: 200px;
+  height: 200px;
+
+  border-radius: 100px;
+  float: left;
+  margin-right: 10px;
+  object-fit: cover;
+}
+a[href^="https"][href$=".com"] {
+  color: red;
+}
+.product {
+  background-color: blueviolet;
+  font: xx-large;
+  font-weight: bold;
+}
+
+p {
+  color: orange;
+}
+
+#products ~ p {
+  color: salmon;
+}
+a:hover,
+a:focus {
+  color: darkgoldenrod;
+}
+
+a:visited,
+a:link {
+  color: dodgerblue;
+}
+
+ul li:nth-child(3n) {
+  color: brown;
+}
+
+article :last-child {
+  font-weight: bolder;
+}
+
+article p:first-of-type {
+  font-size: 140%;
+  font-style: italic;
+}
+
+.first-letter {
+  font-size: 140px;
+  font-weight: bold;
+}
+
+p::after {
+  content: ".....";
+  display: block;
+}
+
+p::before {
+  content: ".....";
+  display: block;
+}
+
+::selection {
+  background-color: darkgreen;
+}
+
+p::first-line {
+  font-weight: bold;
+}
+
+p::first-letter {
+  font-size: 140%;
+  font-weight: bold;
+}
+
+.featured #products {
+  color: darkseagreen;
+}
+
+h1#products {
+  color: darkorchid;
+}
+#products {
+  color: firebrick;
+}
+
+.highlight {
+  color: deeppink;
+}
+
+h1 {
+  color: dodgerblue;
+}
+
+strong {
+  color: initial;
+  border: inherit;
+}
+
+p {
+  color: blueviolet;
+  border: 1px solid black;
+}
+
+.box {
+  /*linear-gradient(10deg, dodgerblue, yellow 30%, tomato);*/
+  background-color: hsl(53deg 93% 51%);
+}
+.box {
+  border: 10px dashed royalblue;
+  border-top: 20px dotted red;
+  border-width: 10px 20px 10px 20px; /*trbl*/
+  border-radius: 100px;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  background: goldenrod;
+  box-shadow: 0 0 30px grey;
+}
+h1 {
+  color: white;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 1);
+}
+
+.box::before {
+  content: "Hello";
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: goldenrod;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+p {
+  margin: 20px; /*trbl 10 20 10 20 vertical padding horizontal padding*/
+  padding: 0;
+}
+
+.test {
+  width: 300px;
+  height: 300px;
+  background-color: tomato;
+  border-radius: 20px;
+  box-shadow: 10px 10px 0px grey;
+}
+
+table,
+td,
+th {
+  /* I've set all the borders using the border property
+  and then removed the left and right border. Alternatively,
+  we could set border-top and border-bottom properties but 
+  that would result in the repetition of the color. If we
+  want to change the border color, we have to change it in
+  two places. */
+  border: 1px solid #c4dcf3;
+  border-left: 0;
+  border-right: 0;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  padding: 10px;
+}
+
+th {
+  background-color: #427fef;
+  color: white;
+}
+
+tr:nth-child(odd) {
+  background-color: #eef7ff;
+}
+
+tfoot {
+  text-align: left;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.box {
+  border: 3px solid gold;
+  width: 150px;
+  height: 150px;
+  overflow: hidden auto;
+}
+
+.box {
+  width: 50vw;
+  height: 100vh;
+  background-color: gold;
+  border-top: 3px solid black;
+}
