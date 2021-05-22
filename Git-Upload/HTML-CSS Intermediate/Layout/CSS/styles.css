@@ -1,0 +1,211 @@
+body {
+  margin: 10px;
+}
+/*Lay-Out--CSS------Grid Box*/
+/*Placing items in named areas
+grid-template-areas
+grid-area*/
+.gridcontainer {
+  display: grid;
+  /*3 * 2 */
+  /*grid-template-rows: 100px 100px 100px;*/ /*also use repeat function in place of values ie.repeat(3,100px);*/
+  /*grid-template-columns: 200px 200px; */ /*also use repeat function in place of values ie.repeat(2,100px);*/
+  /*The above two rows code can be replaced with the one line below using repeat in action*/
+  /*grid-template: repeat(3, 100px) / repeat(2, 100px); */ /*Also the values can be given in fraction as below*/
+  grid-template: 100px auto 100px / 30fr 70fr;
+  grid-template-areas: "header header" "sidebar main" "footer footer";
+  border: 3px solid lightcoral;
+  /*justify-items: stretch;
+  align-items: stretch;*/ /*Start is also available in values...*/
+  /*align-content: center;*/
+  height: 100vh;
+  /*row-gap: 10px;
+  column-gap: 10px;Instead of two properties gap only one below listed property can be used for gap ie gap*/
+  gap: 10px;
+  /*Gap Property
+    row-gap
+    column-gap
+    gap*/
+}
+
+/*Placing items
+grid-row
+grid-column
+grid-area*/
+.box5 {
+  /* width: 5rem;*/
+  /*height: 5rem;*/
+  background-color: lightgreen;
+}
+
+.box-grid-one {
+  grid-column: 1 / 3
+    /*span and -1 can also be used by giving span 2 will take two grids -1 and 3 are same*/; /*if we want to extend a grid to the other box than it has to be noted as  or else 1 or 2 will do */
+  /*grid-row: 2 / span 2;*/ /*change the first box to the other row*/
+  /*start / end*/
+  /* row / column*/
+  /*grid-area: 1 / 1 / 1 / 3;*/ /*first two numbers represent the start and the last two end*/
+}
+/*justify-items--------  justify items in grid(along the horizontal axis)
+align-items------------align the items in grid along verticle axis*/
+.box-grid-four {
+  grid-area: footer;
+}
+
+/*Lay-Out--CSS------Flex Box*/
+/*Siging Items
+All the below items are to be applied on the flex items.
+Item Properties
+Flex-Basis (the initial size of a flex)
+flex-grow  (the growth factor)
+flex-shrink   (the shrink factor)
+flex                                 */
+.container {
+  border: 3px solid lightgreen;
+  display: flex; /*To Lay the Boxes Horizontally---block level element*/
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /*align-content: center;
+  flex-wrap: wrap;  To change the size of the boxes when there is increase in the count of boxes*/
+  height: 90vh;
+}
+.box4 {
+  flex-basis: 15rem; /*To resize a boz using flex*/
+  flex-grow: 1; /*----To make the flex boxes occupy the enteire space in a row automatically*/
+  flex-shrink: 1;
+  flex: 1 1 15rem; /*1st value is grow, 2nd value is shrink, 3rd value is basis*/
+  width: 5rem;
+  height: 5rem;
+  background: gold;
+  margin: 1rem;
+}
+
+.box-flex1 {
+  /*Used to align a single box to the desired coordinates using flex*/
+  align-self: auto;
+  flex-shrink: 0; /*flex shrink is used to shrink the box when the browser is shrinked 0-dont shrink and 1-shrink*/
+  /*flex-basis: 5rem;
+  flex-grow: 2;  ---1 makes the box grow to some lenght and 0 makes the box as it is and 2 makes the box grow very bigger than the other  */
+}
+
+/*Lay-Out--CSS------Floating Elements*/
+.tweet {
+  border: 3px solid darkgray;
+  overflow: hidden;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.avatar {
+  width: 5rem;
+  height: 5rem;
+  background-color: goldenrod;
+  float: left;
+  margin-left: 0.5rem;
+}
+.p3 {
+  margin-left: 50px;
+  padding-left: 10px;
+}
+.clear {
+  clear: both;
+}
+
+/*Lay-Out--CSS------Positioning Elements*/
+
+/*Relative Positioning----relative to the elements normal position*/
+/*Absolute Positioning----relative to the Parent(Applied to the container mostly)*/
+/*Fixed Positioning----relative to the viewport)*/
+.boxes {
+  border: 3px solid lightcoral;
+  position: relative;
+}
+.box4 {
+  width: 5rem;
+  height: 5rem;
+}
+.box-one {
+  background: gold;
+}
+.box-two {
+  background: tomato;
+  position: absolute; /*Fixed Positioning----will remain always on top)*/
+  top: 0;
+  left: 2rem;
+  right: 2rem;
+  width: auto;
+  z-index: 999999; /*1----towards us always stays on top, -1----far from us will be scroll with background 0---stable*/
+}
+.box-three {
+  background: darkgoldenrod;
+}
+
+/*Lay-Out--CSS------Measurement Units*/
+/*Lay-Out--CSS------To Solve the problem of root elements-Universal Declaration*/
+html {
+  /* 62.5% of 16px = 10px*/
+  font-size: 62.5%;
+}
+.box2 {
+  /*50% of the width of the parent*/
+  width: 50vw; /*vw stands for view port width and when applied it takes the entire available space defined, % or pX will not do the same*/
+  height: 100vh; /*vh stands for view port height and when applied it takes the entire available space defined, % or pX will not do the same*/
+  background-color: khaki;
+  border-top: 5px solid red;
+}
+
+.box3 {
+  /*10 x font size of the current element  By Default the root element is 16 px*/
+  width: 10rem; /*em 10 * 16 = 160px ,  rem 10 * 16 = 160px*/
+  height: 100vh; /*vh stands for view port height and when applied it takes the entire available space defined, % or pX will not do the same*/
+  background-color: royalblue;
+  border-top: 5px solid grey;
+}
+.p2 {
+  padding: 0px;
+  margin: 0px;
+}
+
+/*Lay-Out--CSS------Overflowing*/
+
+.box1 {
+  width: 100px;
+  height: 100px;
+  border: 3px solid grey;
+  overflow: hidden auto;
+}
+
+.p1 {
+  padding: 0px 0px;
+  margin: 0px;
+}
+
+/*Lay-Out--CSS-Box Sizing Elements--- Universal Selectors for Box Sizing*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*Lay-Out--CSS-Box Sizing Elements*/
+
+.box::before {
+  content: "Hello";
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: goldenrod;
+  display: inline-block;
+}
+
+/*Layout-CSS- Box Model*/
+
+.p0 {
+  margin: 10px 20px; /*trbl 10 20 10 20*/
+  padding: 5px; /*Margin Collapsing*/
+}
