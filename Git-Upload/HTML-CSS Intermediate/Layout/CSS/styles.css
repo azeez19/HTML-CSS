@@ -1,6 +1,51 @@
 body {
   margin: 10px;
 }
+/*Lay-Out--CSS------Media Queries*/
+.media-container {
+  display: flex;
+  flex-direction: column;
+}
+.box6 {
+  background: gold;
+  padding: 1rem;
+}
+
+.box6:nth-of-type(2) {
+  background: dodgerblue;
+}
+
+@media screen and (min-width: 400px) and (max-width: 600px) {
+  .media-container {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .media-container {
+    flex-direction: row;
+  }
+  .box6 {
+    background: forestgreen;
+  }
+}
+
+/*THe below print selector in media query is used when a user uses the print option in the browser*/
+
+@media print {
+  body {
+    font-size: 12pt;
+  }
+
+  .box6 {
+    padding: 0.5cm;
+  }
+}
+/*Lay-Out--CSS------Hiding Elements*/
+.p4-first {
+  /*display: none;*/
+  visibility: hidden; /*In contrast to the above code this can also be used*/
+}
 /*Lay-Out--CSS------Grid Box*/
 /*Placing items in named areas
 grid-template-areas
