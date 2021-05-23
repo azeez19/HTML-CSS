@@ -1,0 +1,104 @@
+/*To install and use a font from other source in HTML and CSS*/
+
+@font-face {
+  font-family: "opensans";
+  src: url("Fonts/Open-sans/opensans-bold-webfont.woff2") format("woff2"),
+    url("Fonts/Open-sans/opensans-bold-webfont.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "opensans";
+  src: url("Fonts/Open-sans/opensans-regular-webfont.woff2") format("woff2"),
+    url("Fonts/Open-sans/opensans-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  margin: 10px;
+  font-family: "opensans", Arial, Helvetica, sans-serif; /*Providing the font family attribute in body will be helpfull to keep the entire website in a same font*/
+  font-size: 1rem;
+  line-height: 1.5;
+  /*
+  letter-spacing: 1px;
+  word-spacing: 5px;*/
+}
+/*Topography -----Formatting Text*/
+p + p {
+  /*ch is the abbrevation for Relative to the width of the "0" (zero)*/
+  width: 50ch;
+  /*text-align: center;
+  text-indent: 1rem;
+  text-decoration: underline;
+  text-transform: capitalize;
+  white-space: nowrap;
+  border: 3px fuchsia solid;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-clamp: 3;*/
+  /* Multi column Text code
+  columns: 2;
+  column-gap: 2rem;
+  column-rule: 3px dotted #999;*/
+  direction: rtl;
+}
+
+/*Topography -----Horizontal Spacing*/
+/*Should be between 50-70 characters------IDEAL LINE LENGHT*/
+.p2 {
+  /*ch is the abbrevation for Relative to the width of the "0" (zero)*/
+  width: 50ch;
+}
+
+/*Topography -----Vertical Spacing*/
+h1 {
+  margin: 3rem 0 1rem 0;
+}
+
+/*Topography -----Sizing Fonts*/
+.h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+/*Topography -----System Font Stack*/
+
+/*Topography -----Font Services*/
+
+/*Topography -----Flash of Unstyled  Text*/
+
+/*Only font display is to be added in the font face mentioned up for removing the lag for display time of actual fonts in the browser*/
+
+/*Topography--------Embedding Web Fonts*/
+
+/*In the Top of the webpage*/
+
+/*Topography--------Styling Fonts*/
+/*Generally speking we have mainly three types of fonts they are,
+Serif Font-----Georgia,Times New Roman
+Sans-Serif Font---Avenir,Arial,Futura,Helvetica,Roboto
+Monospace------Consolas,Courier,Ubuntu*/
+/*
+p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  font-family: Arial, Helvetica, sans-serif;
+}*/
+h1 {
+  font-family: Georgia, "Times New Roman", Times, serif; /*The mentioned are web safe fonts because these are available in almost all computers around the network*/
+}
+.p1 {
+  font-weight: 100; /*The range is from 100 to 900 100 resembles to very thin and 900 resembles to bolder*/
+  font-style: italic;
+  font-size: 1rem;
+  color: #333;
+}
